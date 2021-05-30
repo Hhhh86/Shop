@@ -1,17 +1,16 @@
-package wushanqiyong.shop.service.user.Impl;
+package wushanqiyong.shop.service.student.Impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.util.StringUtils;
 import wushanqiyong.shop.mapper.StudentMapper;
 import wushanqiyong.shop.pojo.Student;
 
-import wushanqiyong.shop.service.user.UserService;
-import wushanqiyong.shop.vo.JSONResultVO;
+import wushanqiyong.shop.service.student.UserService;
 
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 /**
  * @ProjectName shop-api
@@ -55,5 +54,12 @@ public class UserServiceImpl implements UserService {
     @Override
     public void logout(HttpSession session) {
         session.removeAttribute("user");
+    }
+
+    @Override
+    public List<Student> findAll() {
+        List<Student> studentList = studentMapper.selectList(null);
+        studentList.forEach(System.out::println);
+        return studentList;
     }
 }

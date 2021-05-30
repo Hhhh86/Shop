@@ -3,14 +3,10 @@ package wushanqiyong.shop.controller.admin;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
-import wushanqiyong.shop.pojo.Student;
 import wushanqiyong.shop.pojo.User;
 import wushanqiyong.shop.service.admin.AdminService;
-import wushanqiyong.shop.service.user.UserService;
 import wushanqiyong.shop.vo.JSONResultVO;
-
 import javax.servlet.http.HttpSession;
-import java.util.Date;
 
 /**
  * @ProjectName shop-api
@@ -19,7 +15,7 @@ import java.util.Date;
  * @Author by hyp
  */
 @RestController
-@RequestMapping("/admin")
+@RequestMapping("/adminA")
 public class LoginController {
 
     @Autowired

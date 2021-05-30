@@ -11,9 +11,6 @@ public class User {
     @Column(name = "create_time")
     private Date createTime;
 
-    @Column(name = "update_time")
-    private Date updateTime;
-
     private String email;
 
     private String mobile;
@@ -57,19 +54,6 @@ public class User {
         this.createTime = createTime;
     }
 
-    /**
-     * @return update_time
-     */
-    public Date getUpdateTime() {
-        return updateTime;
-    }
-
-    /**
-     * @param updateTime
-     */
-    public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
-    }
 
     /**
      * @return email
@@ -167,5 +151,20 @@ public class User {
      */
     public void setRoleId(Long roleId) {
         this.roleId = roleId;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", createTime=" + createTime +
+                ", email='" + email + '\'' +
+                ", mobile='" + mobile + '\'' +
+                ", password='" + password + '\'' +
+                ", sex=" + sex +
+                ", status=" + status +
+                ", username='" + username + '\'' +
+                ", roleId=" + roleId +
+                '}';
     }
 }

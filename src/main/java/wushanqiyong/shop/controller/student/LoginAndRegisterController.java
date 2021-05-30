@@ -1,10 +1,10 @@
-package wushanqiyong.shop.controller.user;
+package wushanqiyong.shop.controller.student;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import wushanqiyong.shop.pojo.Student;
-import wushanqiyong.shop.service.user.UserService;
+import wushanqiyong.shop.service.student.UserService;
 import wushanqiyong.shop.vo.JSONResultVO;
 
 import javax.servlet.http.HttpSession;
@@ -17,7 +17,7 @@ import java.util.Date;
  * @Author by hyp
  */
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/student")
 public class LoginAndRegisterController {
 
     @Autowired

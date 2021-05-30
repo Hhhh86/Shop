@@ -4,12 +4,9 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import wushanqiyong.shop.mapper.StudentMapper;
 import wushanqiyong.shop.mapper.UserMapper;
-import wushanqiyong.shop.pojo.Student;
 import wushanqiyong.shop.pojo.User;
 import wushanqiyong.shop.service.admin.AdminService;
-import wushanqiyong.shop.service.user.UserService;
 
 import javax.servlet.http.HttpSession;
 

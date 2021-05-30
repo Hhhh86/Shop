@@ -1,7 +1,6 @@
-package wushanqiyong.shop.service.user;
+package wushanqiyong.shop.service.student;
 
 import wushanqiyong.shop.pojo.Student;
-import wushanqiyong.shop.pojo.User;
 
 import javax.servlet.http.HttpSession;
 import java.util.List;
@@ -22,4 +21,6 @@ public interface UserService {
     Student save(Student users);
     /*注销*/
     public void logout(HttpSession session);
+    /*查询所有学生用户*/
+    public List<Student> findAll();
 }
