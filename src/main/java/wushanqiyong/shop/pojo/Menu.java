@@ -3,7 +3,7 @@ package wushanqiyong.shop.pojo;
 import java.util.Date;
 import javax.persistence.*;
 
-@Table(name = "tuoguan_menu")
+@Table(name = "menu")
 public class Menu {
     @Id
     private Long id;

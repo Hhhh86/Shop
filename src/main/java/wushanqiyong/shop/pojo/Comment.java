@@ -3,7 +3,7 @@ package wushanqiyong.shop.pojo;
 import java.util.Date;
 import javax.persistence.*;
 
-@Table(name = "tuoguan_comment")
+@Table(name = "comment")
 public class Comment {
     @Id
     private Long id;

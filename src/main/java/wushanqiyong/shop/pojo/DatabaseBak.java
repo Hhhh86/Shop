@@ -3,7 +3,7 @@ package wushanqiyong.shop.pojo;
 import java.util.Date;
 import javax.persistence.*;
 
-@Table(name = "tuoguan_database_bak")
+@Table(name = "database_bak")
 public class DatabaseBak {
     @Id
     private Long id;

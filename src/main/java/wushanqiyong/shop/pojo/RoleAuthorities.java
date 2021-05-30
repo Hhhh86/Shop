@@ -2,7 +2,7 @@ package wushanqiyong.shop.pojo;
 
 import javax.persistence.*;
 
-@Table(name = "tuoguan_role_authorities")
+@Table(name = "role_authorities")
 public class RoleAuthorities {
     @Column(name = "role_id")
     private Long roleId;

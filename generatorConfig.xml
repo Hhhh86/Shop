@@ -28,20 +28,9 @@
         <javaClientGenerator targetPackage="wushanqiyong.shop.mapper" targetProject="src/main/java"
                              type="XMLMAPPER"/>
 
-        <table tableName="tuoguan_comment" domainObjectName="Comment"></table>
-        <table tableName="tuoguan_database_bak" domainObjectName="DatabaseBak"></table>
-        <table tableName="tuoguan_goods" domainObjectName="Goods"></table>
-        <table tableName="tuoguan_goods_category" domainObjectName="GoodsCategory"></table>
-        <table tableName="tuoguan_menu" domainObjectName="Menu"></table>
-        <table tableName="tuoguan_news" domainObjectName="News"></table>
-        <table tableName="tuoguan_operater_log" domainObjectName="OperaterLog"></table>
-        <table tableName="tuoguan_report_goods" domainObjectName="ReportGoods"></table>
-        <table tableName="tuoguan_role" domainObjectName="Role"></table>
-        <table tableName="tuoguan_role_authorities" domainObjectName="RoleAuthorities"></table>
-        <table tableName="tuoguan_site_setting" domainObjectName="SiteSetting"></table>
+
         <table tableName="tuoguan_student" domainObjectName="Student"></table>
-        <table tableName="tuoguan_user" domainObjectName="User"></table>
-        <table tableName="tuoguan_wanted_goods" domainObjectName="WantedGoods"></table>
+
 
     </context>
 </generatorConfiguration>
