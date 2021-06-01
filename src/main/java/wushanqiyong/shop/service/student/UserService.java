@@ -1,6 +1,7 @@
 package wushanqiyong.shop.service.student;
 
 import wushanqiyong.shop.pojo.Student;
+import wushanqiyong.shop.vo.JSONResultVO;
 
 import javax.servlet.http.HttpSession;
 import java.util.List;
@@ -20,7 +21,9 @@ public interface UserService {
     /*注册*/
     Student save(Student users);
     /*注销*/
-    public void logout(HttpSession session);
+     void logout(HttpSession session);
     /*查询所有学生用户*/
-    public List<Student> findAll();
+     List<Student> findAll();
+    /*封禁学生用户*/
+     void banStudent(Integer id);
 }

@@ -1,11 +1,14 @@
 package wushanqiyong.shop.pojo;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+
 import java.util.Date;
 import javax.persistence.*;
 
 @Table(name = "comment")
 public class Comment {
-    @Id
+    @TableId(type = IdType.AUTO)
     private Long id;
 
     @Column(name = "create_time")

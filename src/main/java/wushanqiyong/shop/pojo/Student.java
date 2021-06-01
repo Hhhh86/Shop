@@ -1,11 +1,14 @@
 package wushanqiyong.shop.pojo;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+
 import java.util.Date;
 import javax.persistence.*;
 
 @Table(name = "student")
 public class Student {
-    @Id
+    @TableId(type = IdType.AUTO)
     private Long id;
 
     @Column(name = "create_time")
@@ -198,5 +201,23 @@ public class Student {
      */
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", createTime=" + createTime +
+                ", updateTime=" + updateTime +
+                ", academy='" + academy + '\'' +
+                ", grade='" + grade + '\'' +
+                ", mobile='" + mobile + '\'' +
+                ", name='" + name + '\'' +
+                ", qq='" + qq + '\'' +
+                ", school='" + school + '\'' +
+                ", sn='" + sn + '\'' +
+                ", status=" + status +
+                ", password='" + password + '\'' +
+                '}';
     }
 }

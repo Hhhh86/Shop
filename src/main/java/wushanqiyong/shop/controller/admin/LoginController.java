@@ -15,7 +15,7 @@ import javax.servlet.http.HttpSession;
  * @Author by hyp
  */
 @RestController
-@RequestMapping("/adminA")
+@RequestMapping("/adminlogin")
 public class LoginController {
 
     @Autowired

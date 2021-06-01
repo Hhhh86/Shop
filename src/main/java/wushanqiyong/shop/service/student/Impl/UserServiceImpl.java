@@ -4,12 +4,15 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.RequestBody;
 import wushanqiyong.shop.mapper.StudentMapper;
 import wushanqiyong.shop.pojo.Student;
 
 import wushanqiyong.shop.service.student.UserService;
+import wushanqiyong.shop.vo.JSONResultVO;
 
 import javax.servlet.http.HttpSession;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -61,5 +64,14 @@ public class UserServiceImpl implements UserService {
         List<Student> studentList = studentMapper.selectList(null);
         studentList.forEach(System.out::println);
         return studentList;
+    }
+
+    @Override
+    public void banStudent(Integer id) {
+        Student student = studentMapper.selectById(id);
+        student.setStatus(0);
+        student.setUpdateTime(new Date());
+        int i = studentMapper.updateById(student);
+        System.out.println("影响行数"+i);
     }
 }
