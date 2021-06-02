@@ -17,18 +17,18 @@ import java.util.Date;
  * @Author by hyp
  */
 @RestController
-@RequestMapping("/student")
+@RequestMapping("/")
 public class LoginAndRegisterController {
 
     @Autowired
     private UserService userService;
 
-    @RequestMapping("/test")
+    @RequestMapping("test")
     public String test() {
         return "测试";
     }
 
-    @PostMapping("/register")
+    @PostMapping("register")
     public JSONResultVO Register(@RequestParam("name") String name,@RequestParam("sn") String sn,@RequestParam("password") String password) throws Exception {
         if (StringUtils.isEmpty(name) || StringUtils.isEmpty(password)) {
             return JSONResultVO.errorMsg("用户名和密码不能为空...");
@@ -54,7 +54,7 @@ public class LoginAndRegisterController {
             return JSONResultVO.ok("注册成功");
         }
 }
-    @PostMapping("/login")
+    @PostMapping("login")
     public JSONResultVO Login(@RequestParam("sn") String sn,@RequestParam("password") String password,HttpSession session){
         if (StringUtils.isEmpty(sn) || StringUtils.isEmpty(password)) {
             return JSONResultVO.errorMsg("学号或密码不能为空...");
@@ -69,7 +69,7 @@ public class LoginAndRegisterController {
         }
     }
 
-    @GetMapping("/logout")
+    @GetMapping("logout")
     public JSONResultVO Logout(HttpSession session) {
         userService.logout(session);
         return JSONResultVO.ok("注销成功");
