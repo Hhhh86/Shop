@@ -26,8 +26,8 @@ public class LoginController {
         return "测试";
     }
 
-    @PostMapping("/login")
-    public JSONResultVO Login(@RequestBody String username,@RequestBody String password,HttpSession session){
+    @RequestMapping("/login")
+    public JSONResultVO Login(@RequestParam("username") String username,@RequestParam("password") String password,HttpSession session){
         if (StringUtils.isEmpty(username) || StringUtils.isEmpty(password)) {
             return JSONResultVO.errorMsg("用户名或密码不能为空...");
         }
@@ -41,7 +41,7 @@ public class LoginController {
         }
     }
 
-    @GetMapping("/logout")
+    @RequestMapping("/logout")
     public JSONResultVO Logout(HttpSession session) {
         adminService.logout(session);
         return JSONResultVO.ok("注销成功");

@@ -14,6 +14,7 @@ import java.util.List;
 public interface GoodsService {
 
     /*查询所有商品信息*/
-    public List<Goods> findAll();
-
+    List<Goods> findAll();
+    /*分页查询商品信息*/
+    List<Goods> selectPage(Integer page);
 }

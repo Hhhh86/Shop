@@ -29,7 +29,7 @@ public class LoginAndRegisterController {
     }
 
     @PostMapping("/register")
-    public JSONResultVO Register(@RequestBody String name,@RequestBody String sn,@RequestBody String password) throws Exception {
+    public JSONResultVO Register(@RequestParam("name") String name,@RequestParam("sn") String sn,@RequestParam("password") String password) throws Exception {
         if (StringUtils.isEmpty(name) || StringUtils.isEmpty(password)) {
             return JSONResultVO.errorMsg("用户名和密码不能为空...");
         }
@@ -55,7 +55,7 @@ public class LoginAndRegisterController {
         }
 }
     @PostMapping("/login")
-    public JSONResultVO Login(@RequestBody String sn,@RequestBody String password,HttpSession session){
+    public JSONResultVO Login(@RequestParam("sn") String sn,@RequestParam("password") String password,HttpSession session){
         if (StringUtils.isEmpty(sn) || StringUtils.isEmpty(password)) {
             return JSONResultVO.errorMsg("学号或密码不能为空...");
         }

@@ -22,15 +22,15 @@ public class StudentController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("/findall")
+    @RequestMapping("/findall")
     public String findAll(){
         System.out.println("获取所有学生信息");
         List<Student> student = userService.findAll();
         return JSON.toJSONString(student);
     }
 
-    @GetMapping("/ban")
-    public JSONResultVO banStundent(@RequestBody Integer id){
+    @RequestMapping("/ban")
+    public JSONResultVO banStundent(@RequestParam("id") Integer id){
         System.out.println("封禁id" +id+ "的学生用户");
         userService.banStudent(id);
         return JSONResultVO.ok("封禁成功");

@@ -13,7 +13,9 @@ import wushanqiyong.shop.vo.JSONResultVO;
 
 import javax.servlet.http.HttpSession;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @ProjectName shop-api
@@ -30,10 +32,14 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean queryUsernameIsExist(String name) {
-        QueryWrapper queryWrapper = new QueryWrapper();
-        queryWrapper.eq("username",name);
-        Student result = studentMapper.selectOne(queryWrapper);
-        return result != null ? true : false;
+       Map<String,Object> map = new HashMap<String,Object>();
+       map.put("name",name);
+        List<Student> result = studentMapper.selectByMap(map);
+       if(result == null){
+           return false;
+       }else{
+           return true;
+       }
     }
 
 
