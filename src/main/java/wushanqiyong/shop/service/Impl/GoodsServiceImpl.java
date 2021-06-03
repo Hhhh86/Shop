@@ -1,4 +1,4 @@
-package wushanqiyong.shop.service.student.Impl;
+package wushanqiyong.shop.service.Impl;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
@@ -6,9 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import wushanqiyong.shop.mapper.GoodsMapper;
 import wushanqiyong.shop.pojo.Goods;
-import wushanqiyong.shop.service.student.GoodsService;
+import wushanqiyong.shop.pojo.Student;
+import wushanqiyong.shop.service.GoodsService;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -38,6 +40,16 @@ public class GoodsServiceImpl implements GoodsService {
                 goodsList.add(goods);
             }
             return goodsList;
+    }
+
+    @Override
+    public void removeById(Integer id) {
+        Goods goods = goodsMapper.selectById(id);
+        /*0下架 1上架 2售出*/
+        goods.setStatus(0);
+        goods.setUpdateTime(new Date());
+        int i = goodsMapper.updateById(goods);
+        System.out.println("影响行数"+i);
     }
 
 }

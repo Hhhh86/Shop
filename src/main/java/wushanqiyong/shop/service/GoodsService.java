@@ -1,4 +1,4 @@
-package wushanqiyong.shop.service.student;
+package wushanqiyong.shop.service;
 
 import wushanqiyong.shop.pojo.Goods;
 
@@ -17,4 +17,6 @@ public interface GoodsService {
     List<Goods> findAll();
     /*分页查询商品信息*/
     List<Goods> selectPage(Integer page);
+    /*根据id移除商品信息*/
+    void removeById(Integer id);
 }

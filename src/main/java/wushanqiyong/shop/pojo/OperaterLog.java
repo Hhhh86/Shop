@@ -8,15 +8,10 @@ public class OperaterLog {
     @Id
     private Long id;
 
-    @Column(name = "create_time")
-    private Date createTime;
-
     @Column(name = "update_time")
     private Date updateTime;
 
     private String content;
-
-    private String operator;
 
     /**
      * @return id
@@ -30,20 +25,6 @@ public class OperaterLog {
      */
     public void setId(Long id) {
         this.id = id;
-    }
-
-    /**
-     * @return create_time
-     */
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    /**
-     * @param createTime
-     */
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
     }
 
     /**
@@ -74,17 +55,4 @@ public class OperaterLog {
         this.content = content;
     }
 
-    /**
-     * @return operator
-     */
-    public String getOperator() {
-        return operator;
-    }
-
-    /**
-     * @param operator
-     */
-    public void setOperator(String operator) {
-        this.operator = operator;
-    }
 }

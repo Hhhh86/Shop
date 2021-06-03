@@ -1,15 +1,13 @@
-package wushanqiyong.shop.service.student.Impl;
+package wushanqiyong.shop.service.Impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.RequestBody;
 import wushanqiyong.shop.mapper.StudentMapper;
 import wushanqiyong.shop.pojo.Student;
 
-import wushanqiyong.shop.service.student.UserService;
-import wushanqiyong.shop.vo.JSONResultVO;
+import wushanqiyong.shop.service.UserService;
 
 import javax.servlet.http.HttpSession;
 import java.util.Date;
@@ -53,12 +51,23 @@ public class UserServiceImpl implements UserService {
         return result;
     }
 
-
     @Override
-    public Student save(Student student) {
+    public Student save(String sn, String password) {
+        Student student = new Student();
+        student.setCreateTime(new Date());
+        student.setUpdateTime(new Date());
+        student.setAcademy("");
+        student.setGrade("");
+        student.setMobile("");
+        student.setQq("");
+        student.setSchool("");
+        student.setSn(sn);
+        student.setStatus(1);
+        student.setPassword(password);
         studentMapper.insert(student);
         return student;
     }
+
 
     @Override
     public void logout(HttpSession session) {

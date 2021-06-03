@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import wushanqiyong.shop.pojo.User;
-import wushanqiyong.shop.service.admin.AdminService;
+import wushanqiyong.shop.service.AdminService;
 import wushanqiyong.shop.vo.JSONResultVO;
 import javax.servlet.http.HttpSession;
 

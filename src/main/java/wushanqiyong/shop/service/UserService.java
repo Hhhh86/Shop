@@ -1,4 +1,4 @@
-package wushanqiyong.shop.service.student;
+package wushanqiyong.shop.service;
 
 import wushanqiyong.shop.pojo.Student;
 import wushanqiyong.shop.vo.JSONResultVO;
@@ -19,7 +19,7 @@ public interface UserService {
     /*登录*/
     Student queryUserForLogin(String sn, String pwd);
     /*注册*/
-    Student save(Student users);
+    Student save(String sn,String password);
     /*注销*/
      void logout(HttpSession session);
     /*查询所有学生用户*/

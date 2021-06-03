@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import wushanqiyong.shop.pojo.Student;
-import wushanqiyong.shop.service.student.UserService;
+import wushanqiyong.shop.service.UserService;
 import wushanqiyong.shop.vo.JSONResultVO;
 
 import javax.servlet.http.HttpSession;
@@ -37,21 +37,12 @@ public class LoginAndRegisterController {
         if (usernameIsExist) {
             return JSONResultVO.errorMsg("该用户已被注册");
         }else{
-            Student student = new Student();
-            student.setId(null);
-            student.setCreateTime(new Date());
-            student.setUpdateTime(new Date());
-            student.setAcademy("");
-            student.setGrade("");
-            student.setMobile("");
-            student.setQq("");
-            student.setSchool("");
-            student.setSn(sn);
-            student.setStatus(1);
-            student.setPassword(password);
-            userService.save(student);
-            System.out.println("插入成功");
-            return JSONResultVO.ok("注册成功");
+            Student result = userService.save(sn, password);
+            if(result!=null){
+                System.out.println("插入成功");
+                return JSONResultVO.ok("注册成功");
+            }
+            return JSONResultVO.ok("注册失败，请重新尝试");
         }
 }
     @PostMapping("login")

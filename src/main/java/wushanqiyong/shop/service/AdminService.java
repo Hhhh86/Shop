@@ -1,4 +1,4 @@
-package wushanqiyong.shop.service.admin;
+package wushanqiyong.shop.service;
 
 import wushanqiyong.shop.pojo.Student;
 import wushanqiyong.shop.pojo.User;

@@ -11,9 +11,8 @@ import wushanqiyong.shop.mapper.StudentMapper;
 import wushanqiyong.shop.pojo.Goods;
 import wushanqiyong.shop.pojo.Student;
 import wushanqiyong.shop.pojo.User;
-import wushanqiyong.shop.service.admin.AdminService;
-import wushanqiyong.shop.service.student.UserService;
-import wushanqiyong.shop.vo.JSONResultVO;
+import wushanqiyong.shop.service.AdminService;
+import wushanqiyong.shop.service.UserService;
 
 import java.util.ArrayList;
 import java.util.List;
