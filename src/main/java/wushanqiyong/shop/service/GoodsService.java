@@ -1,6 +1,7 @@
 package wushanqiyong.shop.service;
 
 import wushanqiyong.shop.pojo.Goods;
+import wushanqiyong.shop.vo.JSONResultVO;
 
 
 import java.util.List;
@@ -19,4 +20,8 @@ public interface GoodsService {
     List<Goods> selectPage(Integer page);
     /*根据id移除商品信息*/
     void removeById(Integer id);
+    // 查询商品是否存在
+    boolean queryByGoodsId(Integer id);
+    // 发布商品信息
+    boolean saveGoods(float buyprice,  float sellPrice , String name, String photo , String content, Long  goodsCategoryId,  Long studentId  );
 }

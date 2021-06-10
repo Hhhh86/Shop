@@ -8,9 +8,12 @@ import wushanqiyong.shop.mapper.GoodsMapper;
 import wushanqiyong.shop.pojo.Goods;
 import wushanqiyong.shop.pojo.Student;
 import wushanqiyong.shop.service.GoodsService;
+import wushanqiyong.shop.utils.GithubUploader;
+import wushanqiyong.shop.vo.JSONResultVO;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -24,6 +27,9 @@ public class GoodsServiceImpl implements GoodsService {
 
     @Autowired
     private GoodsMapper goodsMapper;
+
+    @Autowired
+    private GithubUploader githubUploader;
 
     @Override
     public List<Goods> findAll() {
@@ -51,5 +57,41 @@ public class GoodsServiceImpl implements GoodsService {
         int i = goodsMapper.updateById(goods);
         System.out.println("影响行数"+i);
     }
+
+    @Override
+    public boolean queryByGoodsId(Integer id) {
+        Goods goods = goodsMapper.selectById(id);
+        if(goods != null){
+            return  true;
+        }else {
+            return  false;
+        }
+    }
+
+    @Override
+    public boolean saveGoods(float buyprice,  float sellPrice ,String name, String photo, String content, Long goodsCategoryId, Long studentId) {
+        Goods goods = new Goods();
+        // 获取连接
+        goods.setFlag(0);
+        goods.setSellPrice(sellPrice);
+        goods.setBuyPrice(buyprice);
+        goods.setContent(content);
+        goods.setCreateTime(new Date());
+        goods.setUpdateTime(new Date());
+        goods.setPhoto(photo);
+        goods.setRecommend(0);
+        goods.setViewNumber(0);
+        goods.setStatus(1);
+        goods.setName(name);
+        goods.setGoodsCategoryId(goodsCategoryId);
+        int flag = goodsMapper.insert(goods);
+        if(flag >= 1){
+            return  true;
+        }
+        return false;
+    }
+
+
+
 
 }

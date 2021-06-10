@@ -26,4 +26,6 @@ public interface UserService {
      List<Student> findAll();
     /*封禁学生用户*/
      void banStudent(Integer id);
+    // 根据id查询学生用户是否存在
+    boolean queryByStudentID(Integer id);
 }

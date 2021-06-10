@@ -89,4 +89,14 @@ public class UserServiceImpl implements UserService {
         int i = studentMapper.updateById(student);
         System.out.println("影响行数"+i);
     }
+
+    @Override
+    public boolean queryByStudentID(Integer id) {
+        Student student = studentMapper.selectById(id);
+        if(student != null){
+            return  true;
+        }else {
+            return false;
+        }
+    }
 }
