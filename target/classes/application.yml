@@ -1,0 +1,11 @@
+
+github:
+  bucket:
+    # 配置仓库所属的用户名（如果是自己创建的，就是自己的用户名）
+    user: "LittlDevil"
+    # 配置仓库名称
+    repository: "image-backet"
+    # 配置自己的acccessToken
+    access-token: "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"
+    url: "https://cdn.jsdelivr.net/gh/${github.bucket.user}/${github.bucket.repository}/"
+    api: "https://api.github.com/repos/${github.bucket.user}/${github.bucket.repository}/contents/"
