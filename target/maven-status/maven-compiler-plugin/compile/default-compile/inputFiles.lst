@@ -8,10 +8,10 @@ F:\Download\Shop\src\main\java\wushanqiyong\shop\controller\student\LoginAndRegi
 F:\Download\Shop\src\main\java\wushanqiyong\shop\mapper\UserMapper.java
 F:\Download\Shop\src\main\java\wushanqiyong\shop\mapper\OperaterLogMapper.java
 F:\Download\Shop\src\main\java\wushanqiyong\shop\service\Impl\UserServiceImpl.java
+F:\Download\Shop\src\main\java\wushanqiyong\shop\service\GoodService.java
 F:\Download\Shop\src\main\java\wushanqiyong\shop\controller\student\GoodsUploadController.java
 F:\Download\Shop\src\main\java\wushanqiyong\shop\mapper\RoleMapper.java
 F:\Download\Shop\src\main\java\wushanqiyong\shop\aspect\LogAspect.java
-F:\Download\Shop\src\main\java\wushanqiyong\shop\service\Impl\GoodsServiceImpl.java
 F:\Download\Shop\src\main\java\wushanqiyong\shop\pojo\GoodsCategory.java
 F:\Download\Shop\src\main\java\wushanqiyong\shop\pojo\OperaterLog.java
 F:\Download\Shop\src\main\java\wushanqiyong\shop\controller\NewShowController.java
@@ -24,7 +24,6 @@ F:\Download\Shop\src\main\java\wushanqiyong\shop\pojo\Menu.java
 F:\Download\Shop\src\main\java\wushanqiyong\shop\service\UserService.java
 F:\Download\Shop\src\main\java\wushanqiyong\shop\mapper\WantedGoodsMapper.java
 F:\Download\Shop\src\main\java\wushanqiyong\shop\pojo\ReportGoods.java
-F:\Download\Shop\src\main\java\wushanqiyong\shop\service\GoodsService.java
 F:\Download\Shop\src\main\java\wushanqiyong\shop\config\CorsConfig.java
 F:\Download\Shop\src\main\java\wushanqiyong\shop\pojo\News.java
 F:\Download\Shop\src\main\java\wushanqiyong\shop\mapper\GoodsMapper.java
@@ -43,10 +42,12 @@ F:\Download\Shop\src\main\java\wushanqiyong\shop\service\Impl\AdminServiceImpl.j
 F:\Download\Shop\src\main\java\wushanqiyong\shop\mapper\MenuMapper.java
 F:\Download\Shop\src\main\java\wushanqiyong\shop\mapper\StudentMapper.java
 F:\Download\Shop\src\main\java\wushanqiyong\shop\service\Impl\CommentServiceImpl.java
+F:\Download\Shop\src\main\java\wushanqiyong\shop\config\RtErrorHandler.java
 F:\Download\Shop\src\main\java\wushanqiyong\shop\pojo\WantedGoods.java
 F:\Download\Shop\src\main\java\wushanqiyong\shop\utils\MyMapper.java
 F:\Download\Shop\src\main\java\wushanqiyong\shop\utils\GeneratorDisplay.java
 F:\Download\Shop\src\main\java\wushanqiyong\shop\pojo\User.java
+F:\Download\Shop\src\main\java\wushanqiyong\shop\service\Impl\GoodServiceImpl.java
 F:\Download\Shop\src\main\java\wushanqiyong\shop\swagger\SwaggerConfig.java
 F:\Download\Shop\src\main\java\wushanqiyong\shop\pojo\Role.java
 F:\Download\Shop\src\main\java\wushanqiyong\shop\config\RestTemplateConfig.java

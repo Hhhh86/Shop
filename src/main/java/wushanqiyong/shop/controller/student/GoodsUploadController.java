@@ -1,14 +1,14 @@
 package wushanqiyong.shop.controller.student;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import wushanqiyong.shop.service.GoodsService;
+import wushanqiyong.shop.pojo.Goods;
+import wushanqiyong.shop.service.GoodService;
 import wushanqiyong.shop.utils.GithubUploader;
 import wushanqiyong.shop.vo.JSONResultVO;
 
@@ -21,11 +21,11 @@ import wushanqiyong.shop.vo.JSONResultVO;
  */
 
 @RestController
-@RequestMapping("/upload")
+@RequestMapping(value = "/upload")
 public class GoodsUploadController {
 
     @Autowired
-    private GoodsService goodsService;
+    private GoodService goodsService;
 
     @Autowired
     private GithubUploader githubUploader;
@@ -33,7 +33,7 @@ public class GoodsUploadController {
 
     /**
      * 上传商品
-     * @param multipartFile
+     * @param multipartFiles
      * @param price
      * @param sellprice
      * @param name
@@ -43,24 +43,46 @@ public class GoodsUploadController {
      * @return
      * @throws IOException
      */
-    @PostMapping("goods")
-    public JSONResultVO upload(@RequestParam("file") MultipartFile multipartFile,
+    @PostMapping(value = "goods", consumes = "multipart/form-data")
+    public JSONResultVO upload(@RequestParam("file") MultipartFile[] multipartFiles,
                                @RequestParam("buyprice") Float price,
                                @RequestParam("sellprice") Float sellprice,
                                @RequestParam("name") String name,
                                @RequestParam("studentId") Long studentId,
                                @RequestParam("goodsCategoryId") Long goodsCategoryId,
                                @RequestParam("content") String content) throws IOException {
-        String url = this.githubUploader.upload(multipartFile);
-        System.out.println("商品url" + url);
-        boolean flag = goodsService.saveGoods(price, sellprice,  name, url, content, goodsCategoryId, studentId);
+        ArrayList<String> arrayList = new ArrayList<>();
+        for (MultipartFile file : multipartFiles) {
+            String url = this.githubUploader.upload(file);
+            arrayList.add(url);
+        }
+
+
+        boolean flag = goodsService.saveGoods(price, sellprice,  name, arrayList, content, goodsCategoryId, studentId);
         if(flag){
-            return JSONResultVO.ok(this.githubUploader.upload(multipartFile));
+            return JSONResultVO.ok(arrayList);
         }else {
             return  JSONResultVO.errorMsg("发布商品失败");
         }
 
     }
+
+    @GetMapping("goods")
+    public JSONResultVO queryGoods(@RequestParam("sid") Integer sid){
+        List<Goods> goods = goodsService.queryByGoodsSid(sid);
+        return  JSONResultVO.ok(goods);
+    }
+
+    @DeleteMapping("delete")
+    public  JSONResultVO deleteById(@RequestParam("id") Integer id){
+        boolean flag = goodsService.deleteByID(id);
+        if(flag){
+            return JSONResultVO.ok();
+        }else {
+            return  JSONResultVO.errorMsg("商品id错误");
+        }
+    }
+
 
 
 

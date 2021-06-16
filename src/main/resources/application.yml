@@ -6,6 +6,6 @@ github:
     # 配置仓库名称
     repository: "image-backet"
     # 配置自己的acccessToken
-    access-token: "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"
+    access-token: "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"
     url: "https://cdn.jsdelivr.net/gh/${github.bucket.user}/${github.bucket.repository}/"
     api: "https://api.github.com/repos/${github.bucket.user}/${github.bucket.repository}/contents/"

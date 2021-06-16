@@ -6,7 +6,7 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import wushanqiyong.shop.pojo.Comment;
 import wushanqiyong.shop.service.CommentService;
-import wushanqiyong.shop.service.GoodsService;
+import wushanqiyong.shop.service.GoodService;
 import wushanqiyong.shop.service.UserService;
 import wushanqiyong.shop.vo.JSONResultVO;
 
@@ -29,7 +29,7 @@ public class CommentController {
     private  UserService userService;
 
     @Autowired
-    private GoodsService goodsService;
+    private GoodService goodsService;
     /**
      * 获取学生评论,指定商品，和指定用户
      */

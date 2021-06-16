@@ -1,552 +1,164 @@
-2021-06-15 19:17:28.711  INFO 118036 --- [main] wushanqiyong.shop.ShopApiApplication     : Starting ShopApiApplication using Java 1.8.0_131 on LAPTOP-04TK9G9I with PID 118036 (F:\Download\Shop\target\classes started by zengweitian in F:\Download\Shop)
-2021-06-15 19:17:28.847 DEBUG 118036 --- [main] wushanqiyong.shop.ShopApiApplication     : Running with Spring Boot v2.4.4, Spring v5.3.5
-2021-06-15 19:17:28.848  INFO 118036 --- [main] wushanqiyong.shop.ShopApiApplication     : No active profile set, falling back to default profiles: default
-2021-06-15 19:17:29.566  INFO 118036 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-06-15 19:17:29.568  INFO 118036 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-06-15 19:17:29.598  INFO 118036 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
-2021-06-15 19:17:29.694  WARN 118036 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[wushanqiyong.mapper]' package. Please check your configuration.
-2021-06-15 19:17:30.143  INFO 118036 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8070 (http)
-2021-06-15 19:17:30.149  INFO 118036 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-06-15 19:17:30.150  INFO 118036 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.44]
-2021-06-15 19:17:30.231  INFO 118036 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-06-15 19:17:30.231  INFO 118036 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1349 ms
-2021-06-15 19:17:30.383  INFO 118036 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2021-06-15 19:17:30.454  INFO 118036 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-06-15 19:17:32.815  INFO 118036 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-06-15 19:17:32.925  INFO 118036 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-06-15 19:17:33.375  INFO 118036 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8070 (http) with context path ''
-2021-06-15 19:17:33.376  INFO 118036 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2021-06-15 19:17:33.387  INFO 118036 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2021-06-15 19:17:33.406  INFO 118036 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2021-06-15 19:17:33.541  INFO 118036 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: LoginUsingPOST_1
-2021-06-15 19:17:33.573  INFO 118036 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: LogoutUsingGET_1
-2021-06-15 19:17:33.590  INFO 118036 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingGET_1
-2021-06-15 19:17:33.591  INFO 118036 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingHEAD_1
-2021-06-15 19:17:33.591  INFO 118036 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingPOST_1
-2021-06-15 19:17:33.591  INFO 118036 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingPUT_1
-2021-06-15 19:17:33.592  INFO 118036 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingPATCH_1
-2021-06-15 19:17:33.592  INFO 118036 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingDELETE_1
-2021-06-15 19:17:33.592  INFO 118036 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingOPTIONS_1
-2021-06-15 19:17:33.593  INFO 118036 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingTRACE_1
-2021-06-15 19:17:33.594  INFO 118036 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingGET_1
-2021-06-15 19:17:33.594  INFO 118036 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingHEAD_1
-2021-06-15 19:17:33.595  INFO 118036 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingPOST_1
-2021-06-15 19:17:33.595  INFO 118036 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingPUT_1
-2021-06-15 19:17:33.596  INFO 118036 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingPATCH_1
-2021-06-15 19:17:33.596  INFO 118036 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingDELETE_1
-2021-06-15 19:17:33.597  INFO 118036 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingOPTIONS_1
-2021-06-15 19:17:33.597  INFO 118036 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingTRACE_1
-2021-06-15 19:17:33.602  INFO 118036 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingGET_2
-2021-06-15 19:17:33.602  INFO 118036 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingHEAD_2
-2021-06-15 19:17:33.603  INFO 118036 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingPOST_2
-2021-06-15 19:17:33.603  INFO 118036 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingPUT_2
-2021-06-15 19:17:33.603  INFO 118036 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingPATCH_2
-2021-06-15 19:17:33.604  INFO 118036 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingDELETE_2
-2021-06-15 19:17:33.604  INFO 118036 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingOPTIONS_2
-2021-06-15 19:17:33.604  INFO 118036 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingTRACE_2
-2021-06-15 19:17:33.618  INFO 118036 --- [main] wushanqiyong.shop.ShopApiApplication     : Started ShopApiApplication in 5.557 seconds (JVM running for 7.611)
-2021-06-15 19:21:08.241  INFO 118036 --- [http-nio-8070-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-06-15 19:21:08.241  INFO 118036 --- [http-nio-8070-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-06-15 19:21:08.242  INFO 118036 --- [http-nio-8070-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-06-15 19:24:23.518  INFO 118036 --- [http-nio-8070-exec-6] wushanqiyong.shop.aspect.LogAspect       : 请求参数：{url='http://localhost:8070/upload/goods', ip='0:0:0:0:0:0:0:1', classMethod='wushanqiyong.shop.controller.student.GoodsUploadController.upload', params=[org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@fecd819, 30.0, 40.0, 小米手机, 5, 6, 你好呀]}
-2021-06-15 19:24:23.523  INFO 118036 --- [http-nio-8070-exec-6] wushanqiyong.shop.utils.GithubUploader   : 上传文件到Github：2021/06/15ddd94cc3f91c4337bbb4f132bda1d045.jpg
-2021-06-15 19:24:25.832 ERROR 118036 --- [http-nio-8070-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.web.client.HttpClientErrorException$Unauthorized: 401 Unauthorized: [no body]] with root cause
-
-org.springframework.web.client.HttpClientErrorException$Unauthorized: 401 Unauthorized: [no body]
-	at org.springframework.web.client.HttpClientErrorException.create(HttpClientErrorException.java:105)
-	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:186)
-	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:125)
-	at org.springframework.web.client.ResponseErrorHandler.handleError(ResponseErrorHandler.java:63)
-	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:819)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:777)
-	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711)
-	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:602)
-	at wushanqiyong.shop.utils.GithubUploader.upload(GithubUploader.java:93)
-	at wushanqiyong.shop.controller.student.GoodsUploadController.upload(GoodsUploadController.java:54)
-	at wushanqiyong.shop.controller.student.GoodsUploadController$$FastClassBySpringCGLIB$$eb04a5f.invoke(<generated>)
-	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
-	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
-	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
-	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
-	at wushanqiyong.shop.controller.student.GoodsUploadController$$EnhancerBySpringCGLIB$$d33be34.upload(<generated>)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
-
-2021-06-15 19:27:04.614  INFO 118036 --- [http-nio-8070-exec-5] wushanqiyong.shop.aspect.LogAspect       : 请求参数：{url='http://localhost:8070/upload/goods', ip='0:0:0:0:0:0:0:1', classMethod='wushanqiyong.shop.controller.student.GoodsUploadController.upload', params=[org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@79761929, 30.0, 40.0, 小米手机, 5, 6, 你好呀]}
-2021-06-15 19:27:04.615  INFO 118036 --- [http-nio-8070-exec-5] wushanqiyong.shop.utils.GithubUploader   : 上传文件到Github：2021/06/15c5628c6f316b4f4cbfc108e4d4b7970d.jpg
-2021-06-15 19:27:06.948 ERROR 118036 --- [http-nio-8070-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.web.client.HttpClientErrorException$Unauthorized: 401 Unauthorized: [no body]] with root cause
-
-org.springframework.web.client.HttpClientErrorException$Unauthorized: 401 Unauthorized: [no body]
-	at org.springframework.web.client.HttpClientErrorException.create(HttpClientErrorException.java:105)
-	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:186)
-	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:125)
-	at org.springframework.web.client.ResponseErrorHandler.handleError(ResponseErrorHandler.java:63)
-	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:819)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:777)
-	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711)
-	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:602)
-	at wushanqiyong.shop.utils.GithubUploader.upload(GithubUploader.java:93)
-	at wushanqiyong.shop.controller.student.GoodsUploadController.upload(GoodsUploadController.java:54)
-	at wushanqiyong.shop.controller.student.GoodsUploadController$$FastClassBySpringCGLIB$$eb04a5f.invoke(<generated>)
-	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
-	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
-	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
-	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
-	at wushanqiyong.shop.controller.student.GoodsUploadController$$EnhancerBySpringCGLIB$$d33be34.upload(<generated>)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
-
-2021-06-15 19:27:16.920  INFO 118036 --- [http-nio-8070-exec-4] wushanqiyong.shop.aspect.LogAspect       : 请求参数：{url='http://localhost:8070/upload/goods', ip='0:0:0:0:0:0:0:1', classMethod='wushanqiyong.shop.controller.student.GoodsUploadController.upload', params=[org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@5e342066, 30.0, 40.0, 小米手机, 5, 6, 你好呀]}
-2021-06-15 19:27:16.921  INFO 118036 --- [http-nio-8070-exec-4] wushanqiyong.shop.utils.GithubUploader   : 上传文件到Github：2021/06/159f632a4006f543c0a21dd53d1a75ec8e.jpg
-2021-06-15 19:27:19.816 ERROR 118036 --- [http-nio-8070-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.web.client.HttpClientErrorException$Unauthorized: 401 Unauthorized: [no body]] with root cause
-
-org.springframework.web.client.HttpClientErrorException$Unauthorized: 401 Unauthorized: [no body]
-	at org.springframework.web.client.HttpClientErrorException.create(HttpClientErrorException.java:105)
-	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:186)
-	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:125)
-	at org.springframework.web.client.ResponseErrorHandler.handleError(ResponseErrorHandler.java:63)
-	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:819)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:777)
-	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711)
-	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:602)
-	at wushanqiyong.shop.utils.GithubUploader.upload(GithubUploader.java:93)
-	at wushanqiyong.shop.controller.student.GoodsUploadController.upload(GoodsUploadController.java:54)
-	at wushanqiyong.shop.controller.student.GoodsUploadController$$FastClassBySpringCGLIB$$eb04a5f.invoke(<generated>)
-	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
-	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
-	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
-	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
-	at wushanqiyong.shop.controller.student.GoodsUploadController$$EnhancerBySpringCGLIB$$d33be34.upload(<generated>)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
-
-2021-06-15 19:30:11.423  INFO 125328 --- [main] wushanqiyong.shop.ShopApiApplication     : Starting ShopApiApplication using Java 1.8.0_131 on LAPTOP-04TK9G9I with PID 125328 (F:\Download\Shop\target\classes started by zengweitian in F:\Download\Shop)
-2021-06-15 19:30:11.425 DEBUG 125328 --- [main] wushanqiyong.shop.ShopApiApplication     : Running with Spring Boot v2.4.4, Spring v5.3.5
-2021-06-15 19:30:11.426  INFO 125328 --- [main] wushanqiyong.shop.ShopApiApplication     : No active profile set, falling back to default profiles: default
-2021-06-15 19:30:12.097  INFO 125328 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-06-15 19:30:12.098  INFO 125328 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-06-15 19:30:12.123  INFO 125328 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
-2021-06-15 19:30:12.200  WARN 125328 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[wushanqiyong.mapper]' package. Please check your configuration.
-2021-06-15 19:30:12.575  INFO 125328 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8070 (http)
-2021-06-15 19:30:12.581  INFO 125328 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-06-15 19:30:12.581  INFO 125328 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.44]
-2021-06-15 19:30:12.657  INFO 125328 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-06-15 19:30:12.657  INFO 125328 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1198 ms
-2021-06-15 19:30:12.804  INFO 125328 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2021-06-15 19:30:12.875  INFO 125328 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-06-15 19:30:14.143  INFO 125328 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-06-15 19:30:14.238  INFO 125328 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-06-15 19:30:14.765  INFO 125328 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8070 (http) with context path ''
-2021-06-15 19:30:14.766  INFO 125328 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2021-06-15 19:30:14.776  INFO 125328 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2021-06-15 19:30:14.795  INFO 125328 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2021-06-15 19:30:14.922  INFO 125328 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: LoginUsingPOST_1
-2021-06-15 19:30:14.940  INFO 125328 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: LogoutUsingGET_1
-2021-06-15 19:30:14.955  INFO 125328 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingGET_1
-2021-06-15 19:30:14.955  INFO 125328 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingHEAD_1
-2021-06-15 19:30:14.956  INFO 125328 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingPOST_1
-2021-06-15 19:30:14.956  INFO 125328 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingPUT_1
-2021-06-15 19:30:14.956  INFO 125328 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingPATCH_1
-2021-06-15 19:30:14.957  INFO 125328 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingDELETE_1
-2021-06-15 19:30:14.957  INFO 125328 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingOPTIONS_1
-2021-06-15 19:30:14.957  INFO 125328 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingTRACE_1
-2021-06-15 19:30:14.958  INFO 125328 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingGET_1
-2021-06-15 19:30:14.958  INFO 125328 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingHEAD_1
-2021-06-15 19:30:14.959  INFO 125328 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingPOST_1
-2021-06-15 19:30:14.959  INFO 125328 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingPUT_1
-2021-06-15 19:30:14.960  INFO 125328 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingPATCH_1
-2021-06-15 19:30:14.960  INFO 125328 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingDELETE_1
-2021-06-15 19:30:14.960  INFO 125328 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingOPTIONS_1
-2021-06-15 19:30:14.961  INFO 125328 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingTRACE_1
-2021-06-15 19:30:14.964  INFO 125328 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingGET_2
-2021-06-15 19:30:14.964  INFO 125328 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingHEAD_2
-2021-06-15 19:30:14.965  INFO 125328 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingPOST_2
-2021-06-15 19:30:14.965  INFO 125328 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingPUT_2
-2021-06-15 19:30:14.965  INFO 125328 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingPATCH_2
-2021-06-15 19:30:14.966  INFO 125328 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingDELETE_2
-2021-06-15 19:30:14.966  INFO 125328 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingOPTIONS_2
-2021-06-15 19:30:14.966  INFO 125328 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingTRACE_2
-2021-06-15 19:30:14.981  INFO 125328 --- [main] wushanqiyong.shop.ShopApiApplication     : Started ShopApiApplication in 3.91 seconds (JVM running for 5.079)
-2021-06-15 19:30:20.567  INFO 125328 --- [http-nio-8070-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-06-15 19:30:20.567  INFO 125328 --- [http-nio-8070-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-06-15 19:30:20.568  INFO 125328 --- [http-nio-8070-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-06-15 19:30:20.642  INFO 125328 --- [http-nio-8070-exec-1] wushanqiyong.shop.aspect.LogAspect       : 请求参数：{url='http://localhost:8070/upload/goods', ip='0:0:0:0:0:0:0:1', classMethod='wushanqiyong.shop.controller.student.GoodsUploadController.upload', params=[org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@53353f64, 30.0, 40.0, 小米手机, 5, 6, 你好呀]}
-2021-06-15 19:30:20.648  INFO 125328 --- [http-nio-8070-exec-1] wushanqiyong.shop.utils.GithubUploader   : 上传文件到Github：2021/06/15488febfe44e24f0e8006e6ef928482b4.jpg
-2021-06-15 19:30:23.653 ERROR 125328 --- [http-nio-8070-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.web.client.HttpClientErrorException$Unauthorized: 401 Unauthorized: [no body]] with root cause
-
-org.springframework.web.client.HttpClientErrorException$Unauthorized: 401 Unauthorized: [no body]
-	at org.springframework.web.client.HttpClientErrorException.create(HttpClientErrorException.java:105)
-	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:186)
-	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:125)
-	at org.springframework.web.client.ResponseErrorHandler.handleError(ResponseErrorHandler.java:63)
-	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:819)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:777)
-	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711)
-	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:602)
-	at wushanqiyong.shop.utils.GithubUploader.upload(GithubUploader.java:93)
-	at wushanqiyong.shop.controller.student.GoodsUploadController.upload(GoodsUploadController.java:54)
-	at wushanqiyong.shop.controller.student.GoodsUploadController$$FastClassBySpringCGLIB$$eb04a5f.invoke(<generated>)
-	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
-	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
-	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
-	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
-	at wushanqiyong.shop.controller.student.GoodsUploadController$$EnhancerBySpringCGLIB$$1e264f0c.upload(<generated>)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
-
-2021-06-15 19:36:59.431  INFO 108652 --- [main] wushanqiyong.shop.ShopApiApplication     : Starting ShopApiApplication using Java 1.8.0_131 on LAPTOP-04TK9G9I with PID 108652 (F:\Download\Shop\target\classes started by zengweitian in F:\Download\Shop)
-2021-06-15 19:36:59.433 DEBUG 108652 --- [main] wushanqiyong.shop.ShopApiApplication     : Running with Spring Boot v2.4.4, Spring v5.3.5
-2021-06-15 19:36:59.434  INFO 108652 --- [main] wushanqiyong.shop.ShopApiApplication     : No active profile set, falling back to default profiles: default
-2021-06-15 19:37:00.127  INFO 108652 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-06-15 19:37:00.128  INFO 108652 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-06-15 19:37:00.153  INFO 108652 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
-2021-06-15 19:37:00.238  WARN 108652 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[wushanqiyong.mapper]' package. Please check your configuration.
-2021-06-15 19:37:00.639  INFO 108652 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8070 (http)
-2021-06-15 19:37:00.646  INFO 108652 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-06-15 19:37:00.646  INFO 108652 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.44]
-2021-06-15 19:37:00.726  INFO 108652 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-06-15 19:37:00.726  INFO 108652 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1250 ms
-2021-06-15 19:37:00.873  INFO 108652 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2021-06-15 19:37:00.950  INFO 108652 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-06-15 19:37:02.327  INFO 108652 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-06-15 19:37:02.434  INFO 108652 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-06-15 19:37:02.929  INFO 108652 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8070 (http) with context path ''
-2021-06-15 19:37:02.929  INFO 108652 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2021-06-15 19:37:02.940  INFO 108652 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2021-06-15 19:37:02.963  INFO 108652 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2021-06-15 19:37:03.090  INFO 108652 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: LoginUsingPOST_1
-2021-06-15 19:37:03.111  INFO 108652 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: LogoutUsingGET_1
-2021-06-15 19:37:03.129  INFO 108652 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingGET_1
-2021-06-15 19:37:03.130  INFO 108652 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingHEAD_1
-2021-06-15 19:37:03.130  INFO 108652 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingPOST_1
-2021-06-15 19:37:03.130  INFO 108652 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingPUT_1
-2021-06-15 19:37:03.131  INFO 108652 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingPATCH_1
-2021-06-15 19:37:03.131  INFO 108652 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingDELETE_1
-2021-06-15 19:37:03.131  INFO 108652 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingOPTIONS_1
-2021-06-15 19:37:03.132  INFO 108652 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingTRACE_1
-2021-06-15 19:37:03.133  INFO 108652 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingGET_1
-2021-06-15 19:37:03.134  INFO 108652 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingHEAD_1
-2021-06-15 19:37:03.134  INFO 108652 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingPOST_1
-2021-06-15 19:37:03.134  INFO 108652 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingPUT_1
-2021-06-15 19:37:03.135  INFO 108652 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingPATCH_1
-2021-06-15 19:37:03.135  INFO 108652 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingDELETE_1
-2021-06-15 19:37:03.135  INFO 108652 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingOPTIONS_1
-2021-06-15 19:37:03.136  INFO 108652 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingTRACE_1
-2021-06-15 19:37:03.141  INFO 108652 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingGET_2
-2021-06-15 19:37:03.141  INFO 108652 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingHEAD_2
-2021-06-15 19:37:03.142  INFO 108652 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingPOST_2
-2021-06-15 19:37:03.142  INFO 108652 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingPUT_2
-2021-06-15 19:37:03.142  INFO 108652 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingPATCH_2
-2021-06-15 19:37:03.143  INFO 108652 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingDELETE_2
-2021-06-15 19:37:03.143  INFO 108652 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingOPTIONS_2
-2021-06-15 19:37:03.143  INFO 108652 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingTRACE_2
-2021-06-15 19:37:03.161  INFO 108652 --- [main] wushanqiyong.shop.ShopApiApplication     : Started ShopApiApplication in 4.127 seconds (JVM running for 5.37)
-2021-06-15 19:37:36.326  INFO 108652 --- [http-nio-8070-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-06-15 19:37:36.327  INFO 108652 --- [http-nio-8070-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-06-15 19:37:36.328  INFO 108652 --- [http-nio-8070-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-06-15 19:37:36.396  INFO 108652 --- [http-nio-8070-exec-1] wushanqiyong.shop.aspect.LogAspect       : 请求参数：{url='http://localhost:8070/upload/goods', ip='0:0:0:0:0:0:0:1', classMethod='wushanqiyong.shop.controller.student.GoodsUploadController.upload', params=[org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@3ba1c266, 30.0, 40.0, 小米手机, 5, 6, 你好呀]}
-2021-06-15 19:37:36.406  INFO 108652 --- [http-nio-8070-exec-1] wushanqiyong.shop.utils.GithubUploader   : 上传文件到Github：2021/06/156693a8a1bb4d4ccb80acc4553d0e6541.jpg
-2021-06-15 19:37:39.584  INFO 108652 --- [http-nio-8070-exec-1] wushanqiyong.shop.utils.GithubUploader   : 上传完毕: {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
-2021-06-15 19:37:40.418  INFO 108652 --- [http-nio-8070-exec-1] wushanqiyong.shop.utils.GithubUploader   : 上传文件到Github：2021/06/15915a8def42d24f029a18d3dc167403d7.jpg
-2021-06-15 19:37:41.384  INFO 108652 --- [http-nio-8070-exec-1] wushanqiyong.shop.utils.GithubUploader   : 上传完毕: {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
-2021-06-15 19:37:41.384  INFO 108652 --- [http-nio-8070-exec-1] wushanqiyong.shop.aspect.LogAspect       : 响应参数:wushanqiyong.shop.vo.JSONResultVO@79a4b106
-2021-06-15 19:53:14.398  INFO 108652 --- [http-nio-8070-exec-3] wushanqiyong.shop.aspect.LogAspect       : 请求参数：{url='http://localhost:8070/upload/goods', ip='0:0:0:0:0:0:0:1', classMethod='wushanqiyong.shop.controller.student.GoodsUploadController.upload', params=[org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@53193014, 30.0, 40.0, 小米手机, 5, 6, 你好呀]}
-2021-06-15 19:53:14.398  INFO 108652 --- [http-nio-8070-exec-3] wushanqiyong.shop.utils.GithubUploader   : 上传文件到Github：2021/06/15f2954a5ac7a04071af1f8ffbb8dc9cf9.jpg
-2021-06-15 19:53:19.632  INFO 108652 --- [http-nio-8070-exec-3] wushanqiyong.shop.utils.GithubUploader   : 上传完毕: {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
-2021-06-15 19:53:19.759  INFO 108652 --- [http-nio-8070-exec-3] wushanqiyong.shop.utils.GithubUploader   : 上传文件到Github：2021/06/15e511fdbbb07c4e4fb19faef46769adb4.jpg
-2021-06-15 19:53:21.831  INFO 108652 --- [http-nio-8070-exec-3] wushanqiyong.shop.utils.GithubUploader   : 上传完毕: {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
-2021-06-15 19:53:21.831  INFO 108652 --- [http-nio-8070-exec-3] wushanqiyong.shop.aspect.LogAspect       : 响应参数:wushanqiyong.shop.vo.JSONResultVO@101cf988
-2021-06-15 19:54:12.207  INFO 109360 --- [main] wushanqiyong.shop.ShopApiApplication     : Starting ShopApiApplication using Java 1.8.0_131 on LAPTOP-04TK9G9I with PID 109360 (F:\Download\Shop\target\classes started by zengweitian in F:\Download\Shop)
-2021-06-15 19:54:12.209 DEBUG 109360 --- [main] wushanqiyong.shop.ShopApiApplication     : Running with Spring Boot v2.4.4, Spring v5.3.5
-2021-06-15 19:54:12.210  INFO 109360 --- [main] wushanqiyong.shop.ShopApiApplication     : No active profile set, falling back to default profiles: default
-2021-06-15 19:54:12.977  INFO 109360 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-06-15 19:54:12.978  INFO 109360 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-06-15 19:54:13.004  INFO 109360 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
-2021-06-15 19:54:13.078  WARN 109360 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[wushanqiyong.mapper]' package. Please check your configuration.
-2021-06-15 19:54:13.472  INFO 109360 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8070 (http)
-2021-06-15 19:54:13.477  INFO 109360 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-06-15 19:54:13.477  INFO 109360 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.44]
-2021-06-15 19:54:13.554  INFO 109360 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-06-15 19:54:13.554  INFO 109360 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1308 ms
-2021-06-15 19:54:13.692  INFO 109360 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2021-06-15 19:54:13.764  INFO 109360 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-06-15 19:54:15.119  INFO 109360 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-06-15 19:54:15.224  INFO 109360 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-06-15 19:54:15.705  INFO 109360 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8070 (http) with context path ''
-2021-06-15 19:54:15.706  INFO 109360 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2021-06-15 19:54:15.716  INFO 109360 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2021-06-15 19:54:15.735  INFO 109360 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2021-06-15 19:54:15.862  INFO 109360 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: LoginUsingPOST_1
-2021-06-15 19:54:15.879  INFO 109360 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: LogoutUsingGET_1
-2021-06-15 19:54:15.893  INFO 109360 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingGET_1
-2021-06-15 19:54:15.893  INFO 109360 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingHEAD_1
-2021-06-15 19:54:15.893  INFO 109360 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingPOST_1
-2021-06-15 19:54:15.893  INFO 109360 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingPUT_1
-2021-06-15 19:54:15.894  INFO 109360 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingPATCH_1
-2021-06-15 19:54:15.894  INFO 109360 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingDELETE_1
-2021-06-15 19:54:15.894  INFO 109360 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingOPTIONS_1
-2021-06-15 19:54:15.895  INFO 109360 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingTRACE_1
-2021-06-15 19:54:15.896  INFO 109360 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingGET_1
-2021-06-15 19:54:15.896  INFO 109360 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingHEAD_1
-2021-06-15 19:54:15.896  INFO 109360 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingPOST_1
-2021-06-15 19:54:15.897  INFO 109360 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingPUT_1
-2021-06-15 19:54:15.897  INFO 109360 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingPATCH_1
-2021-06-15 19:54:15.897  INFO 109360 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingDELETE_1
-2021-06-15 19:54:15.897  INFO 109360 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingOPTIONS_1
-2021-06-15 19:54:15.898  INFO 109360 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingTRACE_1
-2021-06-15 19:54:15.901  INFO 109360 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingGET_2
-2021-06-15 19:54:15.901  INFO 109360 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingHEAD_2
-2021-06-15 19:54:15.901  INFO 109360 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingPOST_2
-2021-06-15 19:54:15.902  INFO 109360 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingPUT_2
-2021-06-15 19:54:15.902  INFO 109360 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingPATCH_2
-2021-06-15 19:54:15.902  INFO 109360 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingDELETE_2
-2021-06-15 19:54:15.903  INFO 109360 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingOPTIONS_2
-2021-06-15 19:54:15.903  INFO 109360 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingTRACE_2
-2021-06-15 19:54:15.917  INFO 109360 --- [main] wushanqiyong.shop.ShopApiApplication     : Started ShopApiApplication in 4.104 seconds (JVM running for 5.258)
-2021-06-15 19:54:29.389  INFO 109360 --- [http-nio-8070-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-06-15 19:54:29.389  INFO 109360 --- [http-nio-8070-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-06-15 19:54:29.390  INFO 109360 --- [http-nio-8070-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-06-15 19:54:29.459  INFO 109360 --- [http-nio-8070-exec-1] wushanqiyong.shop.aspect.LogAspect       : 请求参数：{url='http://localhost:8070/upload/goods', ip='0:0:0:0:0:0:0:1', classMethod='wushanqiyong.shop.controller.student.GoodsUploadController.upload', params=[org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@5744f014, 30.0, 40.0, 小米手机, 5, 6, 你好呀]}
-2021-06-15 19:54:29.465  INFO 109360 --- [http-nio-8070-exec-1] wushanqiyong.shop.utils.GithubUploader   : 上传文件到Github：2021/06/15d53639b4da98459a9d3a2ebb03296b62.jpg
-2021-06-15 19:54:33.931  INFO 109360 --- [http-nio-8070-exec-1] wushanqiyong.shop.utils.GithubUploader   : 上传完毕: {"content":{"name":"15d53639b4da98459a9d3a2ebb03296b62.jpg","path":"2021/06/15d53639b4da98459a9d3a2ebb03296b62.jpg","sha":"763dd786a54567067040e75984c2bc8a17d9758f","size":670009,"url":"https://api.github.com/repos/LittlDevil/image-backet/contents/2021/06/15d53639b4da98459a9d3a2ebb03296b62.jpg?ref=master","html_url":"https://github.com/LittlDevil/image-backet/blob/master/2021/06/15d53639b4da98459a9d3a2ebb03296b62.jpg","git_url":"https://api.github.com/repos/LittlDevil/image-backet/git/blobs/763dd786a54567067040e75984c2bc8a17d9758f","download_url":"https://raw.githubusercontent.com/LittlDevil/image-backet/master/2021/06/15d53639b4da98459a9d3a2ebb03296b62.jpg","type":"file","_links":{"self":"https://api.github.com/repos/LittlDevil/image-backet/contents/2021/06/15d53639b4da98459a9d3a2ebb03296b62.jpg?ref=master","git":"https://api.github.com/repos/LittlDevil/image-backet/git/blobs/763dd786a54567067040e75984c2bc8a17d9758f","html":"https://github.com/LittlDevil/image-backet/blob/master/2021/06/15d53639b4da98459a9d3a2ebb03296b62.jpg"}},"commit":{"sha":"9740ecc47e7d376d3eb433771cec4de7499d04b2","node_id":"MDY6Q29tbWl0Mzc0NTAxNzUzOjk3NDBlY2M0N2U3ZDM3NmQzZWI0MzM3NzFjZWM0ZGU3NDk5ZDA0YjI=","url":"https://api.github.com/repos/LittlDevil/image-backet/git/commits/9740ecc47e7d376d3eb433771cec4de7499d04b2","html_url":"https://github.com/LittlDevil/image-backet/commit/9740ecc47e7d376d3eb433771cec4de7499d04b2","author":{"name":"LittlDevil","email":"53287118+LittlDevil@users.noreply.github.com","date":"2021-06-15T11:54:35Z"},"committer":{"name":"LittlDevil","email":"53287118+LittlDevil@users.noreply.github.com","date":"2021-06-15T11:54:35Z"},"tree":{"sha":"bb1b47fc4844e01c05370c918026341752bbca98","url":"https://api.github.com/repos/LittlDevil/image-backet/git/trees/bb1b47fc4844e01c05370c918026341752bbca98"},"message":"file upload","parents":[{"sha":"32949d31a42c450d924db0cf8147367b93993ae2","url":"https://api.github.com/repos/LittlDevil/image-backet/git/commits/32949d31a42c450d924db0cf8147367b93993ae2","html_url":"https://github.com/LittlDevil/image-backet/commit/32949d31a42c450d924db0cf8147367b93993ae2"}],"verification":{"verified":false,"reason":"unsigned","signature":null,"payload":null}}}
-2021-06-15 19:54:34.089  INFO 109360 --- [http-nio-8070-exec-1] wushanqiyong.shop.utils.GithubUploader   : 上传文件到Github：2021/06/15e3cf5025b5134278bfc752dc60f2fe0e.jpg
-2021-06-15 19:54:35.378  INFO 109360 --- [http-nio-8070-exec-1] wushanqiyong.shop.utils.GithubUploader   : 上传完毕: {"content":{"name":"15e3cf5025b5134278bfc752dc60f2fe0e.jpg","path":"2021/06/15e3cf5025b5134278bfc752dc60f2fe0e.jpg","sha":"763dd786a54567067040e75984c2bc8a17d9758f","size":670009,"url":"https://api.github.com/repos/LittlDevil/image-backet/contents/2021/06/15e3cf5025b5134278bfc752dc60f2fe0e.jpg?ref=master","html_url":"https://github.com/LittlDevil/image-backet/blob/master/2021/06/15e3cf5025b5134278bfc752dc60f2fe0e.jpg","git_url":"https://api.github.com/repos/LittlDevil/image-backet/git/blobs/763dd786a54567067040e75984c2bc8a17d9758f","download_url":"https://raw.githubusercontent.com/LittlDevil/image-backet/master/2021/06/15e3cf5025b5134278bfc752dc60f2fe0e.jpg","type":"file","_links":{"self":"https://api.github.com/repos/LittlDevil/image-backet/contents/2021/06/15e3cf5025b5134278bfc752dc60f2fe0e.jpg?ref=master","git":"https://api.github.com/repos/LittlDevil/image-backet/git/blobs/763dd786a54567067040e75984c2bc8a17d9758f","html":"https://github.com/LittlDevil/image-backet/blob/master/2021/06/15e3cf5025b5134278bfc752dc60f2fe0e.jpg"}},"commit":{"sha":"712cecbb29663933a3a60f8b849ed082691f08ce","node_id":"MDY6Q29tbWl0Mzc0NTAxNzUzOjcxMmNlY2JiMjk2NjM5MzNhM2E2MGY4Yjg0OWVkMDgyNjkxZjA4Y2U=","url":"https://api.github.com/repos/LittlDevil/image-backet/git/commits/712cecbb29663933a3a60f8b849ed082691f08ce","html_url":"https://github.com/LittlDevil/image-backet/commit/712cecbb29663933a3a60f8b849ed082691f08ce","author":{"name":"LittlDevil","email":"53287118+LittlDevil@users.noreply.github.com","date":"2021-06-15T11:54:37Z"},"committer":{"name":"LittlDevil","email":"53287118+LittlDevil@users.noreply.github.com","date":"2021-06-15T11:54:37Z"},"tree":{"sha":"d7048524ef4fde534439f6695566d81313f55656","url":"https://api.github.com/repos/LittlDevil/image-backet/git/trees/d7048524ef4fde534439f6695566d81313f55656"},"message":"file upload","parents":[{"sha":"9740ecc47e7d376d3eb433771cec4de7499d04b2","url":"https://api.github.com/repos/LittlDevil/image-backet/git/commits/9740ecc47e7d376d3eb433771cec4de7499d04b2","html_url":"https://github.com/LittlDevil/image-backet/commit/9740ecc47e7d376d3eb433771cec4de7499d04b2"}],"verification":{"verified":false,"reason":"unsigned","signature":null,"payload":null}}}
-2021-06-15 19:54:35.379  INFO 109360 --- [http-nio-8070-exec-1] wushanqiyong.shop.aspect.LogAspect       : 响应参数:wushanqiyong.shop.vo.JSONResultVO@3e858bd5
-2021-06-15 19:56:21.215  INFO 109360 --- [http-nio-8070-exec-2] wushanqiyong.shop.aspect.LogAspect       : 请求参数：{url='http://localhost:8070/upload/goods', ip='0:0:0:0:0:0:0:1', classMethod='wushanqiyong.shop.controller.student.GoodsUploadController.upload', params=[org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@221f664c, 30.0, 40.0, 小米手机, 5, 6, 你好呀]}
-2021-06-15 19:56:21.216  INFO 109360 --- [http-nio-8070-exec-2] wushanqiyong.shop.utils.GithubUploader   : 上传文件到Github：2021/06/158ae6aaeedbe74dda8448315abceae09d.jpg
-2021-06-15 19:56:22.657  INFO 109360 --- [http-nio-8070-exec-2] wushanqiyong.shop.utils.GithubUploader   : 上传完毕: {"content":{"name":"158ae6aaeedbe74dda8448315abceae09d.jpg","path":"2021/06/158ae6aaeedbe74dda8448315abceae09d.jpg","sha":"953b385d0c41218104e606efb1aeae0e6844c322","size":25790,"url":"https://api.github.com/repos/LittlDevil/image-backet/contents/2021/06/158ae6aaeedbe74dda8448315abceae09d.jpg?ref=master","html_url":"https://github.com/LittlDevil/image-backet/blob/master/2021/06/158ae6aaeedbe74dda8448315abceae09d.jpg","git_url":"https://api.github.com/repos/LittlDevil/image-backet/git/blobs/953b385d0c41218104e606efb1aeae0e6844c322","download_url":"https://raw.githubusercontent.com/LittlDevil/image-backet/master/2021/06/158ae6aaeedbe74dda8448315abceae09d.jpg","type":"file","_links":{"self":"https://api.github.com/repos/LittlDevil/image-backet/contents/2021/06/158ae6aaeedbe74dda8448315abceae09d.jpg?ref=master","git":"https://api.github.com/repos/LittlDevil/image-backet/git/blobs/953b385d0c41218104e606efb1aeae0e6844c322","html":"https://github.com/LittlDevil/image-backet/blob/master/2021/06/158ae6aaeedbe74dda8448315abceae09d.jpg"}},"commit":{"sha":"204accc20d084cd453ea09e7c43405d29ee3a58f","node_id":"MDY6Q29tbWl0Mzc0NTAxNzUzOjIwNGFjY2MyMGQwODRjZDQ1M2VhMDllN2M0MzQwNWQyOWVlM2E1OGY=","url":"https://api.github.com/repos/LittlDevil/image-backet/git/commits/204accc20d084cd453ea09e7c43405d29ee3a58f","html_url":"https://github.com/LittlDevil/image-backet/commit/204accc20d084cd453ea09e7c43405d29ee3a58f","author":{"name":"LittlDevil","email":"53287118+LittlDevil@users.noreply.github.com","date":"2021-06-15T11:56:24Z"},"committer":{"name":"LittlDevil","email":"53287118+LittlDevil@users.noreply.github.com","date":"2021-06-15T11:56:24Z"},"tree":{"sha":"cd9dd528805c2affc959f87f980370a0f6f2529b","url":"https://api.github.com/repos/LittlDevil/image-backet/git/trees/cd9dd528805c2affc959f87f980370a0f6f2529b"},"message":"file upload","parents":[{"sha":"712cecbb29663933a3a60f8b849ed082691f08ce","url":"https://api.github.com/repos/LittlDevil/image-backet/git/commits/712cecbb29663933a3a60f8b849ed082691f08ce","html_url":"https://github.com/LittlDevil/image-backet/commit/712cecbb29663933a3a60f8b849ed082691f08ce"}],"verification":{"verified":false,"reason":"unsigned","signature":null,"payload":null}}}
-2021-06-15 19:56:23.002  INFO 109360 --- [http-nio-8070-exec-2] wushanqiyong.shop.utils.GithubUploader   : 上传文件到Github：2021/06/15ae089571b7aa4647bddac82d337ce62c.jpg
-2021-06-15 19:56:23.513  INFO 109360 --- [http-nio-8070-exec-2] wushanqiyong.shop.utils.GithubUploader   : 上传完毕: {"content":{"name":"15ae089571b7aa4647bddac82d337ce62c.jpg","path":"2021/06/15ae089571b7aa4647bddac82d337ce62c.jpg","sha":"953b385d0c41218104e606efb1aeae0e6844c322","size":25790,"url":"https://api.github.com/repos/LittlDevil/image-backet/contents/2021/06/15ae089571b7aa4647bddac82d337ce62c.jpg?ref=master","html_url":"https://github.com/LittlDevil/image-backet/blob/master/2021/06/15ae089571b7aa4647bddac82d337ce62c.jpg","git_url":"https://api.github.com/repos/LittlDevil/image-backet/git/blobs/953b385d0c41218104e606efb1aeae0e6844c322","download_url":"https://raw.githubusercontent.com/LittlDevil/image-backet/master/2021/06/15ae089571b7aa4647bddac82d337ce62c.jpg","type":"file","_links":{"self":"https://api.github.com/repos/LittlDevil/image-backet/contents/2021/06/15ae089571b7aa4647bddac82d337ce62c.jpg?ref=master","git":"https://api.github.com/repos/LittlDevil/image-backet/git/blobs/953b385d0c41218104e606efb1aeae0e6844c322","html":"https://github.com/LittlDevil/image-backet/blob/master/2021/06/15ae089571b7aa4647bddac82d337ce62c.jpg"}},"commit":{"sha":"644054d22fbde400d90bd8d4ed9c512815533bef","node_id":"MDY6Q29tbWl0Mzc0NTAxNzUzOjY0NDA1NGQyMmZiZGU0MDBkOTBiZDhkNGVkOWM1MTI4MTU1MzNiZWY=","url":"https://api.github.com/repos/LittlDevil/image-backet/git/commits/644054d22fbde400d90bd8d4ed9c512815533bef","html_url":"https://github.com/LittlDevil/image-backet/commit/644054d22fbde400d90bd8d4ed9c512815533bef","author":{"name":"LittlDevil","email":"53287118+LittlDevil@users.noreply.github.com","date":"2021-06-15T11:56:25Z"},"committer":{"name":"LittlDevil","email":"53287118+LittlDevil@users.noreply.github.com","date":"2021-06-15T11:56:25Z"},"tree":{"sha":"02489197a766c305bfa43ebc1192ce638ea7f8dc","url":"https://api.github.com/repos/LittlDevil/image-backet/git/trees/02489197a766c305bfa43ebc1192ce638ea7f8dc"},"message":"file upload","parents":[{"sha":"204accc20d084cd453ea09e7c43405d29ee3a58f","url":"https://api.github.com/repos/LittlDevil/image-backet/git/commits/204accc20d084cd453ea09e7c43405d29ee3a58f","html_url":"https://github.com/LittlDevil/image-backet/commit/204accc20d084cd453ea09e7c43405d29ee3a58f"}],"verification":{"verified":false,"reason":"unsigned","signature":null,"payload":null}}}
-2021-06-15 19:56:23.513  INFO 109360 --- [http-nio-8070-exec-2] wushanqiyong.shop.aspect.LogAspect       : 响应参数:wushanqiyong.shop.vo.JSONResultVO@720f1b8b
+2021-06-16 12:16:15.745  INFO 129196 --- [main] wushanqiyong.shop.ShopApiApplication     : Starting ShopApiApplication using Java 1.8.0_131 on LAPTOP-04TK9G9I with PID 129196 (F:\Download\Shop\target\classes started by zengweitian in F:\Download\Shop)
+2021-06-16 12:16:15.749 DEBUG 129196 --- [main] wushanqiyong.shop.ShopApiApplication     : Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-06-16 12:16:15.751  INFO 129196 --- [main] wushanqiyong.shop.ShopApiApplication     : No active profile set, falling back to default profiles: default
+2021-06-16 12:16:16.529  INFO 129196 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-16 12:16:16.532  INFO 129196 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-06-16 12:16:16.559  INFO 129196 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+2021-06-16 12:16:16.642  WARN 129196 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[wushanqiyong.mapper]' package. Please check your configuration.
+2021-06-16 12:16:17.135  INFO 129196 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8060 (http)
+2021-06-16 12:16:17.143  INFO 129196 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-16 12:16:17.143  INFO 129196 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-06-16 12:16:17.224  INFO 129196 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-16 12:16:17.224  INFO 129196 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1427 ms
+2021-06-16 12:16:17.416  INFO 129196 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2021-06-16 12:16:17.492  INFO 129196 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-06-16 12:16:19.488  INFO 129196 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-06-16 12:16:19.604  INFO 129196 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-16 12:16:20.137  INFO 129196 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8060 (http) with context path ''
+2021-06-16 12:16:20.138  INFO 129196 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-06-16 12:16:20.149  INFO 129196 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-06-16 12:16:20.169  INFO 129196 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-06-16 12:16:20.300  INFO 129196 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: LoginUsingPOST_1
+2021-06-16 12:16:20.317  INFO 129196 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: LogoutUsingGET_1
+2021-06-16 12:16:20.331  INFO 129196 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingGET_1
+2021-06-16 12:16:20.332  INFO 129196 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingHEAD_1
+2021-06-16 12:16:20.332  INFO 129196 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingPOST_1
+2021-06-16 12:16:20.332  INFO 129196 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingPUT_1
+2021-06-16 12:16:20.332  INFO 129196 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingPATCH_1
+2021-06-16 12:16:20.333  INFO 129196 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingDELETE_1
+2021-06-16 12:16:20.333  INFO 129196 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingOPTIONS_1
+2021-06-16 12:16:20.334  INFO 129196 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingTRACE_1
+2021-06-16 12:16:20.335  INFO 129196 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingGET_1
+2021-06-16 12:16:20.335  INFO 129196 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingHEAD_1
+2021-06-16 12:16:20.335  INFO 129196 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingPOST_1
+2021-06-16 12:16:20.336  INFO 129196 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingPUT_1
+2021-06-16 12:16:20.336  INFO 129196 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingPATCH_1
+2021-06-16 12:16:20.336  INFO 129196 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingDELETE_1
+2021-06-16 12:16:20.336  INFO 129196 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingOPTIONS_1
+2021-06-16 12:16:20.337  INFO 129196 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingTRACE_1
+2021-06-16 12:16:20.342  INFO 129196 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingGET_2
+2021-06-16 12:16:20.342  INFO 129196 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingHEAD_2
+2021-06-16 12:16:20.343  INFO 129196 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingPOST_2
+2021-06-16 12:16:20.343  INFO 129196 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingPUT_2
+2021-06-16 12:16:20.344  INFO 129196 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingPATCH_2
+2021-06-16 12:16:20.344  INFO 129196 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingDELETE_2
+2021-06-16 12:16:20.345  INFO 129196 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingOPTIONS_2
+2021-06-16 12:16:20.345  INFO 129196 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingTRACE_2
+2021-06-16 12:16:20.363  INFO 129196 --- [main] wushanqiyong.shop.ShopApiApplication     : Started ShopApiApplication in 5.094 seconds (JVM running for 7.28)
+2021-06-16 12:16:54.295  INFO 129196 --- [http-nio-8060-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-16 12:16:54.296  INFO 129196 --- [http-nio-8060-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-06-16 12:16:54.297  INFO 129196 --- [http-nio-8060-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-06-16 12:16:54.384  INFO 129196 --- [http-nio-8060-exec-2] wushanqiyong.shop.aspect.LogAspect       : 请求参数：{url='http://localhost:8060/upload/goods', ip='0:0:0:0:0:0:0:1', classMethod='wushanqiyong.shop.controller.student.GoodsUploadController.upload', params=[[Lorg.springframework.web.multipart.MultipartFile;@e39add, 320.0, 32.0, 5, 4, 4, 你好]}
+2021-06-16 12:16:54.390  INFO 129196 --- [http-nio-8060-exec-2] wushanqiyong.shop.utils.GithubUploader   : 上传文件到Github：2021/06/1682b3658341a1499f86071b58bb591fb0.jpg
+2021-06-16 12:17:22.465  INFO 129196 --- [http-nio-8060-exec-2] wushanqiyong.shop.utils.GithubUploader   : 上传完毕: {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+2021-06-16 12:17:22.465  INFO 129196 --- [http-nio-8060-exec-2] wushanqiyong.shop.utils.GithubUploader   : 上传文件到Github：2021/06/1617bbeb83f4f34109920fc7cbeef54df3.jpg
+2021-06-16 12:17:23.643  INFO 129196 --- [http-nio-8060-exec-2] wushanqiyong.shop.utils.GithubUploader   : 上传完毕: {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+2021-06-16 12:17:23.865  INFO 129196 --- [http-nio-8060-exec-2] wushanqiyong.shop.aspect.LogAspect       : 响应参数:wushanqiyong.shop.vo.JSONResultVO@7c301a73
+2021-06-16 12:23:47.454  INFO 110388 --- [main] wushanqiyong.shop.ShopApiApplication     : Starting ShopApiApplication using Java 1.8.0_131 on LAPTOP-04TK9G9I with PID 110388 (F:\Download\Shop\target\classes started by zengweitian in F:\Download\Shop)
+2021-06-16 12:23:47.457 DEBUG 110388 --- [main] wushanqiyong.shop.ShopApiApplication     : Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-06-16 12:23:47.457  INFO 110388 --- [main] wushanqiyong.shop.ShopApiApplication     : No active profile set, falling back to default profiles: default
+2021-06-16 12:23:48.250  INFO 110388 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-16 12:23:48.251  INFO 110388 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-06-16 12:23:48.276  INFO 110388 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+2021-06-16 12:23:48.350  WARN 110388 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[wushanqiyong.mapper]' package. Please check your configuration.
+2021-06-16 12:23:48.756  INFO 110388 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8060 (http)
+2021-06-16 12:23:48.761  INFO 110388 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-16 12:23:48.761  INFO 110388 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-06-16 12:23:48.848  INFO 110388 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-16 12:23:48.848  INFO 110388 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1340 ms
+2021-06-16 12:23:49.025  INFO 110388 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2021-06-16 12:23:49.107  INFO 110388 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-06-16 12:23:50.452  INFO 110388 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-06-16 12:23:50.559  INFO 110388 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-16 12:23:51.001  INFO 110388 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8060 (http) with context path ''
+2021-06-16 12:23:51.001  INFO 110388 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-06-16 12:23:51.015  INFO 110388 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-06-16 12:23:51.034  INFO 110388 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-06-16 12:23:51.162  INFO 110388 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: LoginUsingPOST_1
+2021-06-16 12:23:51.180  INFO 110388 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: LogoutUsingGET_1
+2021-06-16 12:23:51.210  INFO 110388 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingGET_1
+2021-06-16 12:23:51.211  INFO 110388 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingHEAD_1
+2021-06-16 12:23:51.212  INFO 110388 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingPOST_1
+2021-06-16 12:23:51.212  INFO 110388 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingPUT_1
+2021-06-16 12:23:51.212  INFO 110388 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingPATCH_1
+2021-06-16 12:23:51.213  INFO 110388 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingDELETE_1
+2021-06-16 12:23:51.213  INFO 110388 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingOPTIONS_1
+2021-06-16 12:23:51.213  INFO 110388 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingTRACE_1
+2021-06-16 12:23:51.214  INFO 110388 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingGET_1
+2021-06-16 12:23:51.214  INFO 110388 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingHEAD_1
+2021-06-16 12:23:51.215  INFO 110388 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingPOST_1
+2021-06-16 12:23:51.215  INFO 110388 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingPUT_1
+2021-06-16 12:23:51.215  INFO 110388 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingPATCH_1
+2021-06-16 12:23:51.216  INFO 110388 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingDELETE_1
+2021-06-16 12:23:51.216  INFO 110388 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingOPTIONS_1
+2021-06-16 12:23:51.216  INFO 110388 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingTRACE_1
+2021-06-16 12:23:51.220  INFO 110388 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingGET_2
+2021-06-16 12:23:51.220  INFO 110388 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingHEAD_2
+2021-06-16 12:23:51.220  INFO 110388 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingPOST_2
+2021-06-16 12:23:51.221  INFO 110388 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingPUT_2
+2021-06-16 12:23:51.221  INFO 110388 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingPATCH_2
+2021-06-16 12:23:51.222  INFO 110388 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingDELETE_2
+2021-06-16 12:23:51.222  INFO 110388 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingOPTIONS_2
+2021-06-16 12:23:51.222  INFO 110388 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingTRACE_2
+2021-06-16 12:23:51.236  INFO 110388 --- [main] wushanqiyong.shop.ShopApiApplication     : Started ShopApiApplication in 4.152 seconds (JVM running for 5.415)
+2021-06-16 12:24:18.131  INFO 110388 --- [http-nio-8060-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-16 12:24:18.132  INFO 110388 --- [http-nio-8060-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-06-16 12:24:18.133  INFO 110388 --- [http-nio-8060-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-06-16 12:24:18.200  INFO 110388 --- [http-nio-8060-exec-5] wushanqiyong.shop.aspect.LogAspect       : 请求参数：{url='http://localhost:8060/upload/goods', ip='0:0:0:0:0:0:0:1', classMethod='wushanqiyong.shop.controller.student.GoodsUploadController.upload', params=[[Lorg.springframework.web.multipart.MultipartFile;@39165fcc, 320.0, 32.0, 5, 4, 4, 你好]}
+2021-06-16 12:24:18.209  INFO 110388 --- [http-nio-8060-exec-5] wushanqiyong.shop.utils.GithubUploader   : 上传文件到Github：2021/06/16f74fe09fe6dc420f9b1a3bf8ce91fb93.jpg
+2021-06-16 12:24:21.048  INFO 110388 --- [http-nio-8060-exec-5] wushanqiyong.shop.utils.GithubUploader   : 上传完毕: {"content":{"name":"16f74fe09fe6dc420f9b1a3bf8ce91fb93.jpg","path":"2021/06/16f74fe09fe6dc420f9b1a3bf8ce91fb93.jpg","sha":"763dd786a54567067040e75984c2bc8a17d9758f","size":670009,"url":"https://api.github.com/repos/LittlDevil/image-backet/contents/2021/06/16f74fe09fe6dc420f9b1a3bf8ce91fb93.jpg?ref=master","html_url":"https://github.com/LittlDevil/image-backet/blob/master/2021/06/16f74fe09fe6dc420f9b1a3bf8ce91fb93.jpg","git_url":"https://api.github.com/repos/LittlDevil/image-backet/git/blobs/763dd786a54567067040e75984c2bc8a17d9758f","download_url":"https://raw.githubusercontent.com/LittlDevil/image-backet/master/2021/06/16f74fe09fe6dc420f9b1a3bf8ce91fb93.jpg","type":"file","_links":{"self":"https://api.github.com/repos/LittlDevil/image-backet/contents/2021/06/16f74fe09fe6dc420f9b1a3bf8ce91fb93.jpg?ref=master","git":"https://api.github.com/repos/LittlDevil/image-backet/git/blobs/763dd786a54567067040e75984c2bc8a17d9758f","html":"https://github.com/LittlDevil/image-backet/blob/master/2021/06/16f74fe09fe6dc420f9b1a3bf8ce91fb93.jpg"}},"commit":{"sha":"a3d1b70a0ca6f6d855168fc82cccd57ee5420630","node_id":"MDY6Q29tbWl0Mzc0NTAxNzUzOmEzZDFiNzBhMGNhNmY2ZDg1NTE2OGZjODJjY2NkNTdlZTU0MjA2MzA=","url":"https://api.github.com/repos/LittlDevil/image-backet/git/commits/a3d1b70a0ca6f6d855168fc82cccd57ee5420630","html_url":"https://github.com/LittlDevil/image-backet/commit/a3d1b70a0ca6f6d855168fc82cccd57ee5420630","author":{"name":"LittlDevil","email":"53287118+LittlDevil@users.noreply.github.com","date":"2021-06-16T04:24:21Z"},"committer":{"name":"LittlDevil","email":"53287118+LittlDevil@users.noreply.github.com","date":"2021-06-16T04:24:21Z"},"tree":{"sha":"b4e4d19034ca9810ac5788596b437a67b096bfbc","url":"https://api.github.com/repos/LittlDevil/image-backet/git/trees/b4e4d19034ca9810ac5788596b437a67b096bfbc"},"message":"file upload","parents":[{"sha":"644054d22fbde400d90bd8d4ed9c512815533bef","url":"https://api.github.com/repos/LittlDevil/image-backet/git/commits/644054d22fbde400d90bd8d4ed9c512815533bef","html_url":"https://github.com/LittlDevil/image-backet/commit/644054d22fbde400d90bd8d4ed9c512815533bef"}],"verification":{"verified":false,"reason":"unsigned","signature":null,"payload":null}}}
+2021-06-16 12:24:21.048  INFO 110388 --- [http-nio-8060-exec-5] wushanqiyong.shop.utils.GithubUploader   : 上传文件到Github：2021/06/162fc48f2975f34513b4c7c67a803a7fa8.jpg
+2021-06-16 12:24:21.565  INFO 110388 --- [http-nio-8060-exec-5] wushanqiyong.shop.utils.GithubUploader   : 上传完毕: {"content":{"name":"162fc48f2975f34513b4c7c67a803a7fa8.jpg","path":"2021/06/162fc48f2975f34513b4c7c67a803a7fa8.jpg","sha":"953b385d0c41218104e606efb1aeae0e6844c322","size":25790,"url":"https://api.github.com/repos/LittlDevil/image-backet/contents/2021/06/162fc48f2975f34513b4c7c67a803a7fa8.jpg?ref=master","html_url":"https://github.com/LittlDevil/image-backet/blob/master/2021/06/162fc48f2975f34513b4c7c67a803a7fa8.jpg","git_url":"https://api.github.com/repos/LittlDevil/image-backet/git/blobs/953b385d0c41218104e606efb1aeae0e6844c322","download_url":"https://raw.githubusercontent.com/LittlDevil/image-backet/master/2021/06/162fc48f2975f34513b4c7c67a803a7fa8.jpg","type":"file","_links":{"self":"https://api.github.com/repos/LittlDevil/image-backet/contents/2021/06/162fc48f2975f34513b4c7c67a803a7fa8.jpg?ref=master","git":"https://api.github.com/repos/LittlDevil/image-backet/git/blobs/953b385d0c41218104e606efb1aeae0e6844c322","html":"https://github.com/LittlDevil/image-backet/blob/master/2021/06/162fc48f2975f34513b4c7c67a803a7fa8.jpg"}},"commit":{"sha":"429730adfef5cef59d5bb644eb3d119db377d96e","node_id":"MDY6Q29tbWl0Mzc0NTAxNzUzOjQyOTczMGFkZmVmNWNlZjU5ZDViYjY0NGViM2QxMTlkYjM3N2Q5NmU=","url":"https://api.github.com/repos/LittlDevil/image-backet/git/commits/429730adfef5cef59d5bb644eb3d119db377d96e","html_url":"https://github.com/LittlDevil/image-backet/commit/429730adfef5cef59d5bb644eb3d119db377d96e","author":{"name":"LittlDevil","email":"53287118+LittlDevil@users.noreply.github.com","date":"2021-06-16T04:24:21Z"},"committer":{"name":"LittlDevil","email":"53287118+LittlDevil@users.noreply.github.com","date":"2021-06-16T04:24:21Z"},"tree":{"sha":"d93a68381b8c1a3632a4cb72adc0b14ee4f815b4","url":"https://api.github.com/repos/LittlDevil/image-backet/git/trees/d93a68381b8c1a3632a4cb72adc0b14ee4f815b4"},"message":"file upload","parents":[{"sha":"a3d1b70a0ca6f6d855168fc82cccd57ee5420630","url":"https://api.github.com/repos/LittlDevil/image-backet/git/commits/a3d1b70a0ca6f6d855168fc82cccd57ee5420630","html_url":"https://github.com/LittlDevil/image-backet/commit/a3d1b70a0ca6f6d855168fc82cccd57ee5420630"}],"verification":{"verified":false,"reason":"unsigned","signature":null,"payload":null}}}
+2021-06-16 12:24:21.863  INFO 110388 --- [http-nio-8060-exec-5] wushanqiyong.shop.aspect.LogAspect       : 响应参数:wushanqiyong.shop.vo.JSONResultVO@3a927877
+2021-06-16 12:40:59.828  INFO 106448 --- [main] wushanqiyong.shop.ShopApiApplication     : Starting ShopApiApplication using Java 1.8.0_131 on LAPTOP-04TK9G9I with PID 106448 (F:\Download\Shop\target\classes started by zengweitian in F:\Download\Shop)
+2021-06-16 12:40:59.830 DEBUG 106448 --- [main] wushanqiyong.shop.ShopApiApplication     : Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-06-16 12:40:59.831  INFO 106448 --- [main] wushanqiyong.shop.ShopApiApplication     : No active profile set, falling back to default profiles: default
+2021-06-16 12:41:00.487  INFO 106448 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-06-16 12:41:00.489  INFO 106448 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-06-16 12:41:00.513  INFO 106448 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+2021-06-16 12:41:00.583  WARN 106448 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[wushanqiyong.mapper]' package. Please check your configuration.
+2021-06-16 12:41:00.954  INFO 106448 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8060 (http)
+2021-06-16 12:41:00.959  INFO 106448 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-16 12:41:00.960  INFO 106448 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-06-16 12:41:01.035  INFO 106448 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-16 12:41:01.035  INFO 106448 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1172 ms
+2021-06-16 12:41:01.175  INFO 106448 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2021-06-16 12:41:01.243  INFO 106448 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-06-16 12:41:02.588  INFO 106448 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-06-16 12:41:02.686  INFO 106448 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-16 12:41:03.132  INFO 106448 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8060 (http) with context path ''
+2021-06-16 12:41:03.133  INFO 106448 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-06-16 12:41:03.143  INFO 106448 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-06-16 12:41:03.165  INFO 106448 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-06-16 12:41:03.287  INFO 106448 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: LoginUsingPOST_1
+2021-06-16 12:41:03.306  INFO 106448 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: LogoutUsingGET_1
+2021-06-16 12:41:03.321  INFO 106448 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingGET_1
+2021-06-16 12:41:03.322  INFO 106448 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingHEAD_1
+2021-06-16 12:41:03.322  INFO 106448 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingPOST_1
+2021-06-16 12:41:03.322  INFO 106448 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingPUT_1
+2021-06-16 12:41:03.323  INFO 106448 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingPATCH_1
+2021-06-16 12:41:03.323  INFO 106448 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingDELETE_1
+2021-06-16 12:41:03.323  INFO 106448 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingOPTIONS_1
+2021-06-16 12:41:03.324  INFO 106448 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: testUsingTRACE_1
+2021-06-16 12:41:03.325  INFO 106448 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingGET_1
+2021-06-16 12:41:03.325  INFO 106448 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingHEAD_1
+2021-06-16 12:41:03.325  INFO 106448 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingPOST_1
+2021-06-16 12:41:03.326  INFO 106448 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingPUT_1
+2021-06-16 12:41:03.326  INFO 106448 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingPATCH_1
+2021-06-16 12:41:03.326  INFO 106448 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingDELETE_1
+2021-06-16 12:41:03.327  INFO 106448 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingOPTIONS_1
+2021-06-16 12:41:03.327  INFO 106448 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingTRACE_1
+2021-06-16 12:41:03.331  INFO 106448 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingGET_2
+2021-06-16 12:41:03.332  INFO 106448 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingHEAD_2
+2021-06-16 12:41:03.332  INFO 106448 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingPOST_2
+2021-06-16 12:41:03.332  INFO 106448 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingPUT_2
+2021-06-16 12:41:03.333  INFO 106448 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingPATCH_2
+2021-06-16 12:41:03.333  INFO 106448 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingDELETE_2
+2021-06-16 12:41:03.333  INFO 106448 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingOPTIONS_2
+2021-06-16 12:41:03.334  INFO 106448 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingTRACE_2
+2021-06-16 12:41:03.348  INFO 106448 --- [main] wushanqiyong.shop.ShopApiApplication     : Started ShopApiApplication in 3.858 seconds (JVM running for 4.894)
+2021-06-16 12:41:12.907  INFO 106448 --- [http-nio-8060-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-16 12:41:12.907  INFO 106448 --- [http-nio-8060-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-06-16 12:41:12.909  INFO 106448 --- [http-nio-8060-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-06-16 12:43:44.700  INFO 106448 --- [http-nio-8060-exec-1] wushanqiyong.shop.aspect.LogAspect       : 请求参数：{url='http://localhost:8060/upload/goods', ip='0:0:0:0:0:0:0:1', classMethod='wushanqiyong.shop.controller.student.GoodsUploadController.queryGoods', params=[6]}
+2021-06-16 12:43:44.762  INFO 106448 --- [http-nio-8060-exec-1] wushanqiyong.shop.aspect.LogAspect       : 响应参数:wushanqiyong.shop.vo.JSONResultVO@3a2bbc04

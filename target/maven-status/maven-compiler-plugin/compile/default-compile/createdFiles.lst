@@ -15,10 +15,11 @@ wushanqiyong\shop\service\CommentService.class
 wushanqiyong\shop\controller\student\GoodsUploadController.class
 wushanqiyong\shop\controller\GoodShowController.class
 wushanqiyong\shop\config\RtErrorHandler.class
-wushanqiyong\shop\service\GoodsService.class
 wushanqiyong\shop\vo\JSONResultVO.class
 wushanqiyong\shop\pojo\News.class
 wushanqiyong\shop\aspect\LogAspect.class
+wushanqiyong\shop\service\Impl\GoodServiceImpl.class
+wushanqiyong\shop\service\GoodService.class
 wushanqiyong\shop\pojo\Goods.class
 wushanqiyong\shop\mapper\RoleMapper.class
 wushanqiyong\shop\service\Impl\NewsServiceImpl.class
@@ -26,7 +27,6 @@ wushanqiyong\shop\controller\student\LoginAndRegisterController.class
 wushanqiyong\shop\mapper\OperaterLogMapper.class
 wushanqiyong\shop\service\Impl\AdminServiceImpl.class
 wushanqiyong\shop\service\Impl\UserServiceImpl.class
-wushanqiyong\shop\service\Impl\GoodsServiceImpl.class
 wushanqiyong\shop\pojo\OperaterLog.class
 wushanqiyong\shop\handler\MyMetaObjectHandler.class
 wushanqiyong\shop\pojo\GoodsCategory.class

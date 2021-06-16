@@ -7,7 +7,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import wushanqiyong.shop.pojo.Goods;
 
-import wushanqiyong.shop.service.GoodsService;
+import wushanqiyong.shop.service.GoodService;
+
 
 import java.util.List;
 
@@ -22,7 +23,7 @@ import java.util.List;
 public class GoodsController {
 
     @Autowired
-    private GoodsService goodsService;
+    private GoodService goodsService;
 
     @RequestMapping("/findall")
     public String findAll(){
